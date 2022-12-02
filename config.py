@@ -1,6 +1,6 @@
 num_kernels = 0
 kernel_dict = {}
-timer_value = 600.0 #seconds
+timer_value = 60.0 * 60 * 24 #seconds
 
 kernel = ''
 kernels = ('python', 'octave', 'ir')
