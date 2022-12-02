@@ -3,7 +3,7 @@ kernel_dict = {}
 timer_value = 600.0 #seconds
 
 kernel = ''
-kernels = ('python', 'octave')
+kernels = ('python', 'octave', 'ir')
 
 import logging
 
