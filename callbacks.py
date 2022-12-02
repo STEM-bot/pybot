@@ -39,6 +39,8 @@ def start_cb(update, context):
 def _init_commands(cl, wd, kernel):
     if kernel == 'python':
         cl.execute_interactive("%matplotlib inline")
+    elif kernel == 'ir':
+        cl.execute_interactive("library(ggplot2)")
     elif kernel == 'octave':
         pkgd = 'octave_packages'
         cl.execute_interactive("pkg prefix %s %s" % (pkgd, pkgd))
