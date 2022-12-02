@@ -13,10 +13,14 @@ class Listener():
     def output_cb(self, msg):
         msg_type = msg['msg_type']
         content = msg['content']
+        #print(msg_type)
+        #print(content)
         if msg_type == 'execute_result':
             self.text += content['data']['text/plain']
         elif msg_type == 'stream':
             self.text += content['text']
+        elif msg_type == 'display_data':
+            self.text += content['data']['text/plain']
         elif msg_type == 'error':
             for line in content['traceback']:
                 self.text += line
